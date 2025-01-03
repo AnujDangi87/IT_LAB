@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Text Retriver</title>
+        <script type="text/javascript">
+            function TextRetriver(){
+                var textField = document.getElementById('textField');
+                if (textField.value == ""){
+                    alert("Please type in the filed");
+                }
+                else
+                {
+                    alert("You entered: " + textField.value);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type = 'text' id = 'textField'>
+        <button onclick = 'TextRetriver()'>
+            sumbit
+        </button>
+    </body>
+</html>
