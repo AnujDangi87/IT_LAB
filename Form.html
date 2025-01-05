@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Fill Form Please</h1>
+        <form action="/sumbit-feedback" method="POST">
+            <fieldset>
+                <legend>Please Give Your Suggestion</legend>
+
+                <!--Name field-->
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placehoder="Enter your name." required><br><br>
+
+                <!--Email field-->
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" placehoder="Enter your email." required><br><br>
+
+                <!--Comment field-->
+                <label for="comment">Comments:</label><br>
+                <textarea id="comments" name="comments" placeholer="Tell us abouut your insights." rows="4" cols="50" required></textarea><br>
+
+                <button type="sumbit">Sumbit</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
