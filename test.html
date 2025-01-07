@@ -6,20 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <br>
-    <audio controls>
-        <source src="sample-3s.mp3" type="audio/mp3">
-        Your browser does not support the audio formats provided.
-      </audio><br>
-    <canvas>
-        <script >
-            var canvas = document.getElementsByTagName("canvas")[0];
-            var context = canvas.getContext("2d");
-            context.fillRect(0, 0, 100, 100);
-        </script>
-        Your browser does not support the canvas tag.
-    </canvas>
-    
-      
+    <h2>Finding HTML Element by Id</h2>
+    <p id="intro">Hello World!</p>
+    <p>This example demonstrate the <b>getElementById("intro")</b> method.</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p class="intro">The DOM is very useful.</p>
+    <p class="intro">This example demonstrates the <b>getElementByClassName</b> method.</p>
+    <script>
+        var myElement = document.getElementById("intro");
+        document.getElementById("demo1").innerHTML = "The text form the intro paragraph is "+ myElement.innerHTML;
+        var x = document.getElementsByTagName("p");
+        document.getElementById("demo2").innerHTML = "The text in first paragraph (index 0) is: " + x[0].innerHTML;
+        var x1 = document.getElementByClassName("intro");
+        document.getElementById("demo").innerHTML = 'The first paragraph (index 0) with class ="intro": ' + x1[0].innerHTML;
+    </script>
 </body>
 </html>
