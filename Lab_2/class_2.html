@@ -6,7 +6,17 @@
         <title>Practise class 2</title>
     </head>
     <body>
-        <input type="checkbox" value="yes" name="firstcb" id="cb1">
-        <input type="checkbox" value="no" name="secondcb" id="cb2">
+       <section id="use_input">
+        <form action="http://www.mydomain.com/test-button.cgi" method="post">
+            <input type="checkbox" name="checkbox" value="yes">Yes<br>
+            <input type="checkbox" name="checkbox" value="no">No<br>
+            <hr width="200" align="left">
+            <!--If you give same name for name in radio input it will let you choose only one option.-->
+            <input type="radio" name="gender" value="male">Male<br>
+            <input type="radio" name="gender" value="female">Female<br>
+            <hr width="200" align="left">
+            <input type="submit" value="submit">
+            </form>
+       </section>
     </body>
 </html>

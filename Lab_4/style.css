@@ -1,0 +1,126 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:'Roboto', sans-serif;
+    font-weight:100;
+}
+.container{
+    margin:0 auto;
+    max-width: 940px;
+    padding: 0 10px;
+}
+.header{
+    background: url(https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg) no-repeat
+    center center;
+    background-size:cover;
+    height:400px;
+    text-align:center;
+}
+.header.container{
+    position:relative;
+    top:200px;
+}
+.header h1{
+    color:#fff;
+    line-height: 100px;
+    font-size: 80px;
+    margin-top:0;
+    margin-bottom:80px;
+    text-transform: upperCase;
+}
+.header p{
+    color:#fff;
+    font-weight:500;
+    letter-spacing:8px;
+    margin-top:0;
+    margin-bottom:40px;
+    text-transform: upperCase;
+}
+.btn{
+    color:#fff;
+    background:#000;
+    padding:10px 40px;
+    text-decoration:none;
+    transition:background .5s;
+}
+.nav{
+    background:#000;
+    height: 80px;
+    width:100%;
+}
+.nav ul{
+    height: 80px;
+    list-style:none;
+    margin:0 auto;
+    padding:0;
+}
+.nav ul li{
+    color:#fff;
+    display:inline-block;
+    height:80px;
+    line-height:80px;
+    list-style:none;
+    padding:0 10px;
+    transition: background .5s;
+}
+.btn:hover, .nav ul li:hover{
+    background:#117bff;
+    cursor:pointer;
+}
+.main img{
+    float:left;
+    margin:50px 80px 50px 0;
+    max-width: 300px;
+    max-height: 300px;
+    align-self: auto;
+}
+.main{
+    background: url(https://www.codewithrandom.com/wp-content/uploads/2022/10/Number-Guessing-Game-using-JavaScript-3.png) center
+    center;
+    position: relative;
+    background-size: cover;
+    height: 400px;
+    text-align: center;
+}
+.jumbotron{
+    background: url(https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg) center
+    center;
+    background-size:cover;
+    height:400px;
+}
+.jumbotron .container{
+    position: relative;
+    top: 120px;
+}
+.jumbotron h2{
+    color: #fff;
+    text-align: right;
+}
+.jumbotron p{
+    color:#fff;
+    text-align: right;
+}
+.jumbotron .btn{
+    margin:10px 0 0;
+    float: right;
+}
+.footer{
+    background: #000;
+    height: 80px;
+    padding-bottom: 50px;
+}
+.footer p{
+    color:#fff;
+    font-size:14px;
+    height:80px;
+    line-height:80px;
+    margin:0;
+}
+.main .jumbotron{
+    padding: 0 30px;
+}
+.main img{
+    width:100%
+}
