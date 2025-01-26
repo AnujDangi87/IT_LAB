@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Css Javascript sample codes</title>
+    <script type="text/javascript">
+        function load(){
+            alert("You just loaded the page.");
+        }
+    </script>
+    
+</head>
+<body bgcolor="lightblue" onload="load()">
+    <section id="heading">
+        <h1>This is heading 1</h1>
+        <h2>This is heading 2</h2>
+        <h3>This is heading 3</h3>
+        <h4>This is heading 4</h4>
+        <h5>This is heading 5</h5>
+        <h6>This is heading 6</h6>
+    </section>
+    <section id="comments">
+        <!--This is a comment statement.-->
+    </section>
+    <section id="text based">
+        <p>This is bold <b>text.</b></p>
+        <p>This is Storng <strong>text.</strong></p>
+        <p>This is Big <big>text.</big> </p>
+        <center>This is to center the text.</center>
+        <p>This is to emphasize the <em>text.</em></p>
+        <p>This is to font the <font size="+3">text.</font></p>
+        <p>This is italic <i>text.</i></p>
+        <p>This is Strike <strike>text.</strike></p>
+        <p>This is small <small>text.</small></p>
+        <p>This is to underline the <u>text.</u></p>
+        <tt>teleype i dont know what is this.</tt>
+
+    </section>
+    <hr>
+    <section id="list">
+        <!--There are three type of bulleted list -> circle, square, disc.-->
+        <ul type="circle">
+            <li>This is unordered list circle type</li>
+        </ul>
+        <ul type="disc"><li>
+            This is unordered list disc type
+        </li></ul>
+        <ul type="square">
+            <li>This is unordered list square type</li>
+        </ul>
+
+        <!--There are five type of attributes in ordered list -> number, roman, small alpha, capital alpha-->
+        <ol type="1">
+            <li>This is numeric attribute of ordered list.</li>
+        </ol>
+        <ol type="I">
+            <li>This is roman attribute of ordered list.</li>
+        </ol>
+
+        <!--Desciption list it has dt(description term) and dd(description definition) tag-->
+        <dl>
+            <dt>HTML</dt>
+            <dd>Hypertext markup language.</dd><br>
+            <dt>CSS</dt>
+            <dd>Cascadding style sheet.</dd><br>
+            <dt>JavaScript</dt>
+            <dd>A programming language to make web page interactive.</dd><br>
+        </dl>
+    </section><hr>
+
+    <section id="links, anchor">
+        <!--Anchor has target attribute which are _blank,_parent,_self,_top-->
+        <a href="BasicHtmlWebPage.html" target="_blank">next page(blank attribute)</a><br>
+        <a href="BasicHtmlWebPage.html" target="_self">next page(self attribute)</a>
+        <br>
+    </section><hr>
+
+    <section id="embed, img, video">
+        <embed align="center" src="../CopyUni/UoH-logo.png" width="500px" height="200px" >
+            <hr>
+        <img src="../CopyUni/ioe-logo-banner.png" width="500px" heigth="200px" align="center" alt="University logo">
+        This is university logo<br>
+            <hr>
+        <embed src="../sample-3s.mp3" autostart="false">
+    </section><hr>
+
+    <section id="input, form">
+        <!--Form is used to take user input. Input tag should should always be inside form tag.-->
+        <form action="mailto:abc@gmail.com" method="POST">
+        <input type="tel" maxlength="10" required placeholder="Enter your phone number.">
+        <input type="submit" value="submit"><br>
+        </form>
+
+        <form>
+        <textarea id ="comment" wrap="virtual" placeholder="Tell us about your comment" rows="3" cols="8" required></textarea>
+        <input type="submit" value="submit">
+        <input type="reset" value="clear">
+        </form>
+        <hr>
+
+        <h3>Menus</h3>
+        <form method="post">
+            <select name="today day">
+                <option>------Enter today day------</option>
+                <option value="Sunday">sunday</option>
+                <option value="monday">monday</option>
+            </select><br>
+            <hr>
+
+            <input type="checkbox" name="student" value="student" checked>Student<br>
+            <input type="checkbox" name="teacher" value="teacher">Teacher<br>
+
+            <label name="radio-gender">Gender : </label><br>
+            <input type="radio" name="gender" value="male">Male<br>
+            <input type="radio" name="gender" value="female">Female<br>
+            <hr>
+        </form>
+    </section><hr>
+
+    <section id="table">
+        <table border="1" width="345" cellspacing="3" cellpadding="4" align="left" bgcolor="beige">
+            <tr>
+                <th><b>Name</b></th>
+                <th><b>Roll No</b></th>
+            </tr>
+            <tr align="center">
+                <td>Anuj</td>
+                <td>23MCCE16</td>
+            </tr>
+            <tr align="center">
+                <td>Chandan</td>
+                <td>23MCCE15</td>
+            </tr>
+            <tr align="center" bgcolor="gray">
+                <td colspan="2">Hello this is colspan attribute</td>
+            </tr>
+        </table>
+    </section>
+    <hr>
+    <section id="scrolling bar on site">
+        <marquee bgcolor="#cccccc" loop="-1" scrollamount="6" width="100%">Example Marquee<a href="https://google.com"> google</a></marquee>
+    </section>
+    <section id="alignment">
+        <div align="right">
+            <p>hello from right.</p>
+        </div>
+        <div align="center">
+            <p>hello from center.</p>
+        </div>
+    </section><hr>
+
+    <section id="javascript">
+        <h2 align="center">Now we will learn about JavaScript.</h2><br>
+
+        <center>
+            <script type="text/javascript">
+                //This is comment
+                /*This is multi line comment*/
+                document.write("Hello World !!!!<br>");
+
+                a = 1;
+                b = 2;
+                z = a+b;
+                document.write("The result is : "+z+"<br>");
+
+                //if-else statement
+                if (a == 1)
+                {
+                    document.write("We are inside if statement.<br>");
+                }
+                else
+                {
+                    document.write("We are inside else statement.<br>");
+                }
+
+                //conditional operator(ternary operator)
+                c = (a>b)?3:4;
+                document.write("The value of c is : "+c+"<br>");
+
+                //Switch case
+                switch(c)
+                {
+                    case 3:document.write("We are inside case value 3.<br>");
+                            break;
+                    case 4:document.write("We are inside case value 4.<br>");
+                            break;
+                    default:document.write("This is default case.<br>");
+                }
+
+                //for loop
+                document.write("Prime numbers:<br>");
+                for(i=2;i<13;i=i+2)
+                {
+                    document.write(i+"<br>");
+                }
+                j=1;
+                document.write("Odd numbers : <br>")
+                while(j<13)
+                {
+                    document.write(j+"<br>");
+                    j = j+2;
+                }
+
+                //for-in loop
+                arr = ["hello","how","are you"];
+
+                for (x in arr){
+                    document.write(arr[x]+" ");
+                }
+                document.write("<br>");
+            </script>
+            <!--implementing do while loop in table tag-->
+            <table border="2" cellpadding="1">
+                <tr align="center">
+                    <th><b>Number</b></th>
+                    <th><b>Square</b></th>
+                </tr>
+                <script>
+                    k=1;
+                    do
+                    {
+                        document.write("<tr><td>"+k+"</td><td>"+k*k+"</td><tr>");
+                        k++;
+                        if(k==9)
+                            continue;
+                    }while(k<11);
+                </script>
+            </table>
+            <!--alert box, promot box, confirm box.-->
+            <script>
+                alert("Hello, this is alert box.");
+
+                if(confirm("Do you accept terms & condition to use this website."))
+                    alert("Thank you!");
+                else
+                    alert("You will see only limited features of this website.");
+
+                if (prompt("Enter your country.") == "India")
+                    alert("You can use this website.");
+                else
+                    alert("You can't use this website.");
+            </script>
+
+            <!--Fuctions in javascript-->
+            <script>
+                function clik(){
+                    document.write("<br>You called clik function.<br>");
+                }
+                clik();
+            </script>
+            <br>
+            
+            <!--Arrays-->
+            <script>
+                arr = new Array(5);
+                for (i=0;i<5;i++){
+                    arr[i] = i+5;
+                }
+                for (i in arr){
+                    document.write(arr[i]+" ");
+                }
+                document.write("<br>");
+
+                //two dimensional array
+                arr2 = [[1,2,3],[3,4,5],[7,8,9]];
+                document.write("Two dimensional array.<br>");
+                for (i=0;i<3;i++)
+                {
+                    for (j=0;j<3;j++)
+                    {
+                        document.write(arr2[i][j]+" ");
+                    }
+                    document.write("<br>");
+                }
+
+                arr3 = new Array();
+
+                document.write("Array second method.<br>");
+                arr3[0] = "hello";
+                arr3[1] = "why";
+
+                for(i in arr3)
+                {
+                    document.write(arr3[i]+" ");
+                }
+                document.write("<br>");
+
+                function call(){
+                    alert("button is clicked.");
+                }
+                
+            </script><br>
+            <input type="submit" value="press to call function on submit" onclick="call()">
+
+            <br>
+            <script>
+                // Using inbuilt Date object.
+                mydate = new Date;
+                document.write("Today's day is : "+mydate.toString());
+                document.write("<br>Today's date is : "+ mydate.getDate());
+                document.write("<br>Today's hour is " + mydate.getHours()+"<br>");
+
+                //Using in built String Object.
+                str = new String;
+                str1 = new String;
+                str = "Anuj";
+                str1 = "Dangi";
+                str = str.concat(str1);
+                document.write(str+"<br>");
+                document.write(str.toUpperCase()+"<br>");
+                
+                document.write(str.replace("Anuj", "Ajay")+"<br>");
+
+                document.write(str.substr(4,5)+"<br>");
+                document.write(str.substring(4,9)+"<br>");
+
+                arr4 = str.split("");
+                for (i in arr4)
+                {
+                    document.write(arr4[i]+"<br>");
+                }
+                document.write("The length of string 2 is : "+str1.length+"<br>");
+
+                //Using in built Math object
+                document.write("The value of 5's power to 10 is : " + Math.pow(5, 10)+"<br>");
+                document.write("<p style=\"color:red\">The value of abs(-10.4) is : " + Math.abs(-10.4)+"</p><br>");
+                document.write("The value of exp to 5 is : " + Math.exp(5)+"<br>");
+                document.write("The value of floor(10.4) is : " + Math.floor(10.4)+"<br>");
+                document.write("The maximum between 5 and 2434 is : " + Math.max(5, 2434)+"<br>");
+                document.write("The square root of 1234 is  " + Math.sqrt(1234)+"<br>");
+
+                function sqRoot(num){
+                    alert("Square root of "+num+" is : "+Math.sqrt(num));
+                }
+                
+            </script>
+            <form id="form1">
+                <input type="number" id="text1">
+                <input type="submit" value="enter" onclick="sqRoot(form1.text1.value)">
+            </form>
+        </center>
+    </section><hr>
+</body>
+</html>
