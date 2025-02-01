@@ -1,8 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>hello this is practise html.</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar Registration</title>
+    <style>
+        body {
+            background-color: beige;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        #registration-form {
+            width: 50%;
+            margin: auto;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="registration-form">
+        <h2 align="center">Registration</h2>
+        <div id="container">
+            <form>
+                <fieldset>
+                    <label>Participant is:</label>
+                    Student
+                    <input type="radio" name="user" value="student">
+                    Faculty Member
+                    <input type="radio" name="user" value="faculty">
+                    Professional
+                    <input type="radio" name="user" value="professional">
+                    Company/Firm Representative
+                    <input type="radio" name="user" value="company">
+                    <br><br>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name." maxlength="25" required><br><br>
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address." maxlength="40" required><br><br>
+
+                    <label for="gender">Gender:</label>
+                    Male
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    Female
+                    <input type="radio" id="female" name="gender" value="female">
+                    Other
+                    <input type="radio" id="other" name="gender" value="other">
+                    <br><br>
+
+                    <label for="payment">Payment Method:</label>
+                    Credit Card
+                    <input type="radio" id="credit" name="payment" value="credit" required>
+                    Debit Card
+                    <input type="radio" id="debit" name="payment" value="debit">
+                    Demand Draft
+                    <input type="radio" id="demanddraft" name="payment" value="demanddraft">
+                    <br><br>
+
+                    <label for="accommodation">Accommodation Required:</label>
+                    Yes
+                    <input type="radio" id="accommodation_yes" name="accommodation" value="yes" required>
+                    No
+                    <input type="radio" id="accommodation_no" name="accommodation" value="no">
+                    <br><br>
+
+                    <input type="submit" value="Register">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
 </html>

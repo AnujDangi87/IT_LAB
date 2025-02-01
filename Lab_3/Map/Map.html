@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map of India and World</title>
+    <style type="text/css">
+        body {
+            background-color: beige;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer{
+            align-self: start;
+        }
+        ul{
+            list-style-type:none;
+        }
+        li{
+            float:right;
+            border: 2px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>World Map</h1>
+    <p>Click on country to visit it.</p>
+    <div id="World">
+        <div id="container">
+            <img src="../../Images/Screenshot 2025-01-28 141047.png" usemap="#world-map" width="1119" height="825">
+
+            <map name="world-map">
+                <area target="_self" alt="India" title="India" href="India.html" coords="767,491,751,450,740,443,745,428,758,413,754,396,763,395,767,400,775,399,776,418,778,424,799,432,821,422,825,428,814,447" shape="poly">
+                <area target="_self" alt="countries" title="Countries" href="countries.html" coords="0,0,1119,825">
+            </map>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="container">
+            <footer>
+                &copy; Company since 2004
+
+                <div id="about">
+                    <ul>
+                        Contact info : 
+                        <li><b>abc@gmail.com</b></li>
+                        <li><b>x.com</b></li>
+                        <li><b>linkdin</b></li>
+                    </ul>
+                </div>
+                <a href="#">Back to top</a>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

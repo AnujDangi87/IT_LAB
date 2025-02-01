@@ -4,32 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
-    <link rel="stylesheet" href="Product.css">
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    }
+
+    .header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    .header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .header nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .product {
+        background-color: #fff;
+        margin: 20px 0;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .product img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    }
+    </style>
 </head>
 <body>
-    <div class=header id="header">
+    <header class="header" id="header">
         <div class="container">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#product1">Laptop</a></li>
-                <li><a href="#product2">Mobile</a></li>
-                <li><a href="#product3">Watch</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#product1">Laptop</a></li>
+                    <li><a href="#product2">Mobile</a></li>
+                    <li><a href="#product3">Watch</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    <div id="product1" class="product">
-        <h1>Laptop</h1>
-        <img src="../Images/https://img.freepik.com/free-psd/metaverse-character-pack_23-2150145384.jpg?ga=GA1.1.329140214.1737608009&semt=ais_incoming">
-    </div>
-    <div id="product2" class="product">
-        <h1>Mobile</h1>
-        <img src="../Images/modern-smartphone-with-pink-gradient-screen-isolated-background_632498-38455.avif">
-
-    </div>
-    <div id="product3" class="product">
-        <h1>Watch</h1>
-        <img src="../Images/images.jpeg">
-
-    </div>
+    </header>
+    <main>
+        <section id="product1" class="product">
+            <h1>Laptop</h1>
+            <a href="laptop.html"><img src="../Images/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L2hpcHBvdW5pY29ybjc2X3dhdGVyY29sb3JfaWxsdXN0cmF0aW9uX29mX2xhcHRvcF9pc29sYXRlX2lsbHVzdF85ODc5ZmYwOS1iMjM5LTQ2ZDItYWM2Yi1iYzcwMjI3MGJmZTQucG5n.webp" alt="Laptop"></a>
+            
+            <p>High-performance laptops for all your needs.</p>
+        </section>
+        <section id="product2" class="product">
+            <h1>Mobile</h1>
+            <a href="mobile.html"><img src="../Images/modern-smartphone-with-pink-gradient-screen-isolated-background_632498-38455.avif" alt="Mobile"></a>
+            
+            <p>Latest smartphones with cutting-edge technology.</p>
+        </section>
+        <section id="product3" class="product">
+            <h1>Watch</h1>
+            <a href="watch.html"><img src="../Images/images.jpeg" alt="Watch"></a>
+            
+            <p>Stylish and functional watches for every occasion.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Product. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        .sunday{
+            color:red;
+        }
+        .weekday{
+            color:green;
+        }
+        .holiday{
+            color:blue;
+        }
+    </style>
+    <script>
+        function calendar()
+        {
+            month = document.getElementById("month").value;
+            year = document.getElementById("year").value;
+            holiday = document.getElementById("holidays").value.split(",").map(Number);
+
+            totalDay = new Date(year, month, 0).getDate();
+
+            content = "<table border='1'><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Web</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>";
+            
+            for(let i=1;i<=totalDay;i++)
+            {
+                day = new Date(year, month-1, i).getDay();
+
+                if(i == 1 && day != 0)
+                {
+                    content = content + "<td colspan='" + day +"'</td>";
+                }
+                
+                if(day == 0)
+                {
+                    content = content + "<td class='sunday'>"+i+"</td>";
+                }
+                else if(holiday.includes(i))
+                    content = content + "<td class='holiday'>" + i + "</td>";
+                else
+                    content = content + "<td class='weekday'>"+i+"</td>";
+                
+                if(day == 6)
+                {
+                    content = content + "</tr><tr>"
+                }
+                
+            }
+            content = content + "</tr></table>"
+            document.getElementById("cal").innerHTML = content;
+        
+        }
+    </script>
+</head>
+<body>
+        <h2>Generate Calendar</h2>
+        <label for="month">Month (1-12):</label>
+        <input type="number" id="month" name="month" min="1" max="12"><br><br>
+
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" min="1900" max="2100"><br><br>
+
+        <label for="holidays">Holidays (comma-separated dates):</label>
+        <input type="text" id="holidays" name="holidays"><br><br>
+
+        <input type="submit" value="Calendar" onclick="calendar()">
+    <div id="cal"></div>
+</body>
+</html>

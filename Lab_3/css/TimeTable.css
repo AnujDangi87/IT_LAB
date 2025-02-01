@@ -1,0 +1,16 @@
+th{
+    background-color: rgb(240, 169, 179);
+}
+
+
+.sub{
+    background-color: orange;
+}
+.sub:hover{
+    background-color: yellow;
+    box-shadow: 3px 3px gray;
+    transition: 1s, 1s, 1s;
+}
+marquee{
+    background-color: gray;
+}
