@@ -14,6 +14,24 @@
         .holiday{
             color:blue;
         }
+        #submit{
+            
+            width: 80px;
+            height: 2em;
+            border-radius: 10px;
+        }
+        #submit:hover{
+            cursor: pointer;
+        }
+        #tab{
+            justify-self: center;
+            margin:20px 20px;
+            padding:10px;
+        }
+        table{
+            transform: scale(2);
+            transform-origin: top left;
+        }
     </style>
     <script>
         function calendar()
@@ -24,7 +42,7 @@
 
             totalDay = new Date(year, month, 0).getDate();
 
-            content = "<table border='1'><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Web</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>";
+            content = "<div id='tab'><table border='1'><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Web</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>";
             
             for(let i=1;i<=totalDay;i++)
             {
@@ -50,7 +68,7 @@
                 }
                 
             }
-            content = content + "</tr></table>"
+            content = content + "</tr></table></div>"
             document.getElementById("cal").innerHTML = content;
         
         }
@@ -67,7 +85,7 @@
         <label for="holidays">Holidays (comma-separated dates):</label>
         <input type="text" id="holidays" name="holidays"><br><br>
 
-        <input type="submit" value="Calendar" onclick="calendar()">
+        <input type="submit" value="Calendar" id="submit" onclick="calendar()">
     <div id="cal"></div>
 </body>
 </html>
