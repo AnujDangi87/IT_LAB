@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equivalent="X-UA-compatible" content="IE=edge">
+    <title>Form Validation</title>
+    <script src="../javascript/validate.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../css/FormValidation.css" type="text/css">
+</head>
+<body>
+    <div id="form-validation">
+        <form id="form1" onsubmit="return validate()" onreset="clear()">
+            <fieldset>
+                <legend>User Information</legend>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your name" required>
+                <span id="error-name" class="error"></span><br><br>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" autocomplete="email" placeholder="Enter your email" required>
+                <span id="error-email" class="error"></span><br><br>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                <span id="error-password" class="error"></span><br><br>
+
+                <label for="dob">Date of birth</label>
+                <input type="text" id="dob" name="dob" required>
+                <span id="error-dob" class="error"></span><br><br>
+
+                <label for="phonenumber">Phone Number</label>
+                <input type="text" id="phonenumber" name="phonenumber" placeholder="Enter your phone number." required>
+                <span id="error-phonenumber" class="error"></span><br><br>
+                <div id="input">
+                <button type="submit" id="submit" class="input-button">Submit</button>
+                <button type="reset" id="reset" class="input-button">Clear</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

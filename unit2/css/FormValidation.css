@@ -1,0 +1,51 @@
+html
+{
+    margin:0%;
+    background-color: beige;
+}
+#form-validation{
+    align-items: center;
+    margin-left:30%;
+    margin-right:30%;
+}
+
+fieldset{
+    border:2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span{
+
+    color:red;
+}
+input{
+    padding: 10px;
+    border-radius: 15px;
+}
+#input{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+button{
+    width:10vw;
+    margin-left: 3vw;
+    padding:12px;
+    padding-right:10vw;
+    border-radius:15px;
+    border: 1px solid black;
+    color:black;
+    text-align: center;
+    background-color: lightblue;
+    
+}
+button:hover{
+    cursor: pointer;
+}
+input[type="date"]{
+    width: 155px;
+}
