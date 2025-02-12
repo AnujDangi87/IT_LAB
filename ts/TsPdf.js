@@ -1,0 +1,18 @@
+var first = 123;
+var second = 0x37CF;
+console.log(first);
+console.log(second);
+var str = ["hello", "how", "are", "you"];
+var str1 = [2, "how"];
+console.log(str, str1);
+console.log("tsc -p");
+var tpl = [1, "anuj"];
+console.log(typeof (tpl));
+tpl.push(2, "ajay");
+var dy = [];
+dy.push(3);
+console.log(dy.length);
+dy.push(5);
+console.log(dy);
+console.log(typeof (dy));
+console.log(dy.length);
