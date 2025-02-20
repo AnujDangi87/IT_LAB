@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="form-validation">
-        <form id="form1" onsubmit="return validate()" onreset="clear()">
+        <form id="form1" onsubmit="return validate()">
             <fieldset>
                 <legend>User Information</legend>
                 <label for="name">Name</label>
@@ -34,7 +34,7 @@
                 <span id="error-phonenumber" class="error"></span><br><br>
                 <div id="input">
                 <button type="submit" id="submit" class="input-button">Submit</button>
-                <button type="reset" id="reset" class="input-button">Clear</button>
+                <button type="reset" id="reset" class="input-button" onclick="clear()">Clear</button>
                 </div>
             </fieldset>
         </form>

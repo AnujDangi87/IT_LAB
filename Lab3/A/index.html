@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+
+    <link type="text/css" rel="stylesheet" href="../css/signup.css">
+    <script type="text/javascript" src="../js/validate_signup.js"></script>
+</head>
+<body onload="initial_alert()">
+    <div id="sign-up">
+        <form id="form1" action="" onsubmit="return validate_signup()">
+            <fieldset>
+                <legend>Sign-up</legend>
+
+                <label for="username">Username : </label>
+                <input type="text" id="username" placeholder="e.g. Anuj123" maxlength="40" required><br><br>
+
+                <label for="email">Email : </label>
+                <input type="text" id="email" placeholder="e.g. abc@domain" maxlength="60" required><br><br>
+
+                <label for="password">Password : </label>
+                <input type="password" id="password" placeholder="Enter your password" maxlength="8" required><br><br>
+
+                <label for="password">Confirm Password : </label>
+                <input type="password" id="c-password" placeholder="Enter your password agian" maxlength="8" required><br><br>
+
+                <label for="submit"></label>
+                <input type="submit" id="submit" value="submit">
+                <label for="clear"></label>
+                <input type="reset" id="clear" value="clear"><br><br>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
