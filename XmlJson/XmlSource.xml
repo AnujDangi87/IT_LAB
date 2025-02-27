@@ -1,0 +1,20 @@
+<bookstore>
+<book>
+<title>Learning XML</title>
+<author>Erik T. Ray</author>
+<year>2003</year>
+<price>33.25</price>
+</book>
+<book>
+<title>Learning Python</title>
+<author>Mark Lutz</author>
+<year>2015</year>
+<price>44.94</price>
+</book>
+<book>
+<title>Java Servlet Programming</title>
+<author> William Crawford and Jason Hunter</author>
+<year>2018</year>
+<price>15.71</price>
+</book>
+</bookstore>

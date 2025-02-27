@@ -3,35 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justify-Self Example</title>
-    <style>
-        .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            background-color: lightgray;
-            padding: 10px;
-        }
-        .item {
-            background-color: lightblue;
-            padding: 10px;
-        }
-        .item1 {
-            justify-self: start;
-        }
-        .item2 {
-            justify-self: center;
-        }
-        .item3 {
-            justify-self: end;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <div class="item item1">Item 1</div>
-        <div class="item item2">Item 2</div>
-        <div class="item item3">Item 3</div>
-    </div>
+    <input type="text" id="text" placeholder="enter your text">
+    <button type="submit" id="button">submit</button>
+    <script>
+        let b = document.getElementById("button");
+
+        b.addEventListener("onclick", () => {
+            let a = document.getElementById("text").value;
+            console.log(a);
+        })
+    </script>
 </body>
 </html>

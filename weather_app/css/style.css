@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    }
+    .container {
+    margin-top: 50px;
+    }
+    input {
+    padding: 10px;
+    width: 200px;
+    }
+    button {
+    padding: 10px;
+    margin-left: 10px;
+    }
+    #weatherData {
+    margin-top: 20px;
+    }

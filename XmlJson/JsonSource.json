@@ -1,0 +1,21 @@
+{"bookstore":[
+    {"book":{
+       "title": "Learning XML",
+       "author": "Erik T. Ray",
+       "year": "2003",
+       "price": "33.25"
+    }},
+    {"book":{
+       "title": "Learning Python",
+       "author": "Mark Lutz",
+       "year": "2015",
+       "price": "44.94"
+    }},
+    {"book":{
+       "title": "Java Servlet Programming",
+       "author": "William Crawford and Jason Hunter",
+       "year": "2018",
+       "price": "15.71"
+    }}
+ ]}
+ 

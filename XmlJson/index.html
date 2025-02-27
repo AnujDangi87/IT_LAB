@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Access a JavaScript object:</p>
+
+<p id="demo"></p>
+
+<script>
+	var book, title;
+	book = {
+      "title": "Learning XML",
+      "author": "Erik T. Ray",
+      "year": "2023",
+      "price": "33.25"
+   };
+   book = {
+      "title": "Core Servlets and JavaServer Pages",
+      "author": ["Marty Hall", "Larry Brown"],
+      "year": "2015",
+      "price": "50.25"
+   };
+	title = book.title;
+	document.getElementById("demo").innerHTML = title + " " + book.year;
+</script>
+
+</body>
+</html>

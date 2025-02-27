@@ -36,6 +36,7 @@ function showTask(){
 
     for(let i=0;i<task.length;i++)
     {
+        console.log("hello");
         if(tkStatus[i] === 1)
         {
             if(tkDate[i] == "")
