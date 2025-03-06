@@ -7,14 +7,11 @@ var fetchWeatherBtn = document.getElementById("fetch-weather") as HTMLButtonElem
 var weatherDataDiv = document.getElementById("weather-data") as HTMLDivElement;
 
 const getWeather = async (city: string)=> { 
-    try { 
         fetch(`${API_URL}?q=${city}&units=metric&appid=${API_KEY}`)
         .then(Response => Response.json())
-        .then(data => displayWeather(data));
-    } catch (error) { 
-        console.error(error);
-        weatherDataDiv.innerHTML = `<p style="color:red;">City not found. Please try again.</p>`; 
-    } 
+        .then(data => displayWeather(data))
+        .catch(err => {console.error(err);
+        weatherDataDiv.innerHTML = `<p style="color:red;">City not found. Please try again.</p>`;})
 }; 
 const displayWeather = (data:any) => { 
     weatherDataDiv.innerHTML = ` 

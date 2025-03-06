@@ -42,15 +42,12 @@ var fetchWeatherBtn = document.getElementById("fetch-weather");
 var weatherDataDiv = document.getElementById("weather-data");
 var getWeather = function (city) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
-        try {
-            fetch("".concat(API_URL, "?q=").concat(city, "&units=metric&appid=").concat(API_KEY))
-                .then(function (Response) { return Response.json(); })
-                .then(function (data) { return displayWeather(data); });
-        }
-        catch (error) {
-            console.error(error);
+        fetch("".concat(API_URL, "?q=").concat(city, "&units=metric&appid=").concat(API_KEY))
+            .then(function (Response) { return Response.json(); })
+            .then(function (data) { return displayWeather(data); })
+            .catch(function (err) {
             weatherDataDiv.innerHTML = "<p style=\"color:red;\">City not found. Please try again.</p>";
-        }
+        });
         return [2 /*return*/];
     });
 }); };

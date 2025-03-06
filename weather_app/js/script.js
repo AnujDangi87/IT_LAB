@@ -43,7 +43,7 @@ var fetchWeatherBtn = document.getElementById("fetch-weather");
 var weatherDataDiv = document.getElementById("weather-data");
 // API Key & URL 
 var API_KEY = "c7a2743e2c8db250c4f994ad2cf13813";
-var API_URL = "https://api.openweathermap.org/data/3.0/weather";
+var API_URL = "https://api.openweathermap.org/data/2.5/weather";
 // Fetch Weather Data 
 var getWeather = function (city) { return __awaiter(void 0, void 0, void 0, function () {
     var response, error_1;
