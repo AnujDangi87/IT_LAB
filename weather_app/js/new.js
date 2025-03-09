@@ -40,15 +40,36 @@ var API_KEY = "c7a2743e2c8db250c4f994ad2cf13813";
 var cityInput = document.getElementById("city-input");
 var fetchWeatherBtn = document.getElementById("fetch-weather");
 var weatherDataDiv = document.getElementById("weather-data");
+var time = document.getElementById("time");
+setInterval(myFunction, 1000);
+function myFunction() {
+    var d = new Date();
+    time.innerHTML =
+        d.getHours() + ":" +
+            d.getMinutes() + ":" +
+            d.getSeconds();
+}
 var getWeather = function (city) { return __awaiter(_this, void 0, void 0, function () {
+    var response, data, error_1;
     return __generator(this, function (_a) {
-        fetch("".concat(API_URL, "?q=").concat(city, "&units=metric&appid=").concat(API_KEY))
-            .then(function (Response) { return Response.json(); })
-            .then(function (data) { return displayWeather(data); })
-            .catch(function (err) {
-            weatherDataDiv.innerHTML = "<p style=\"color:red;\">City not found. Please try again.</p>";
-        });
-        return [2 /*return*/];
+        switch (_a.label) {
+            case 0:
+                _a.trys.push([0, 3, , 4]);
+                return [4 /*yield*/, fetch("".concat(API_URL, "?q=").concat(city, "&units=metric&appid=").concat(API_KEY))];
+            case 1:
+                response = _a.sent();
+                return [4 /*yield*/, response.json()];
+            case 2:
+                data = _a.sent();
+                displayWeather(data);
+                return [3 /*break*/, 4];
+            case 3:
+                error_1 = _a.sent();
+                weatherDataDiv.innerHTML = "<p style=\"color:red;\">City not found. Please try again.</p>";
+                console.error("Error : " + error_1);
+                return [3 /*break*/, 4];
+            case 4: return [2 /*return*/];
+        }
     });
 }); };
 var displayWeather = function (data) {
