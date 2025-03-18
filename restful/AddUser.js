@@ -1,9 +1,9 @@
 var express = require('express');
 var fs = require("fs");
 var app = express();
-const port = 3000;
+const port = 3001;
 var server = app.listen(port, () => {
-    console.log("Server is running on port 3000");
+    console.log("Server is running on port 3001");
 });
 
 var bodyParser = require('body-parser')
@@ -16,9 +16,11 @@ app.post('/rest', function (req, res) {
     
     var newuser = req.body;
     newuser = JSON.stringify(newuser);
+    newuser = "," + newuser;
     fs.writeFile("./newUser.json", newuser, {flag : 'a'}, (err) => {
-        console.log(err);
+        if(err)
+            console.err(err);
     });
-    res.end(newuser);
+    res.json(newuser);
     });
     })
