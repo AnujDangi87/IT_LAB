@@ -14,6 +14,10 @@ const student = new Schema({
   id: {
     type: String,
     require:true
+  },
+  age:{
+    type:Number,
+    require:false
   }
 });
 
