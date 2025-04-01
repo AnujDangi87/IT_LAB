@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD app</title>
+    <link rel="stylesheet" src="./css/style.css">
+    </link>
+    <style>
+        body {
+            margin: 5%;
+            background-color: aqua;
+        }
+        header{
+            background-color: khaki;
+            border:solid black;
+            padding:2%;
+            border-color: aqua;
+        }
+        #add-quote{
+            background-color: khaki;
+            border:solid black;
+            padding:2%;
+            border-color: aqua;
+        }
+        #replace{
+            background-color: khaki;
+            border:solid black;
+            padding:2%;
+            border-color: aqua;
+        }
+        #remove{
+            background-color: khaki;
+            border:solid black;
+            padding:2%;
+            border-color: aqua;
+        }
+        #quotes{
+            background-color: khaki;
+            border:solid black;
+            padding:2%;
+            border-color: aqua;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <h1>May Node and Express be with you.</h1>
+    </header>
+    <div class="container">
+        <div id="add-quote">
+            <h2>Add quote</h2>
+            <form id="post" action="http://localhost:3000/" method="Post">
+                <input type="text" name="name" id="name" placeholder="name" autocomplete="on" required>
+                <input type="text" name="quote" id="quote" placeholder="quote" required autocomplete="on">
+                <input type="submit" value="Submit" id="add-btw">
+            </form>
+        </div>
+        <div id="replace">
+            <h2>Replace</h2>
+            <h3>Replace first quote</h3>
+            <form id="update" action="http://localhost:3000/put" method="post">
+                <input type="submit" value="Replace quote" id="replace-btw">
+            </form>
+        </div>
+        <div id="remove">
+            <h2>Remove</h2>
+            <h3>Delete one quote</h3>
+            <form id="delete" action="http://localhost:3000/delete" method="get">
+                <input type="submit" value="Delete quote" id="remove-btw">
+            </form>
+        </div>
+    </div>
+
+    <div id="quotes">
+        <h2>Quotes</h2>
+        <span id="show-quotes"></span>
+    </div>
+
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./jquery-3.7.1.min.js"></script>
+</body>
+
+</html>
