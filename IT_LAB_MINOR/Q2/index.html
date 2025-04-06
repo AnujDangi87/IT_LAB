@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <style type="text/css">
+        body{
+            margin:0%;
+            padding: 0%;
+            background-color: lightblue;
+        }
+        header{
+            color:darkblue;
+            background-color: lightgreen ;
+            border: 4px solid black;
+            text-align: center;
+        }
+        div{
+            margin-top: 10px;
+            padding-left:30vw;
+            padding-right:30vw;
+            border: 4px solid #000000;
+            background-color: aliceblue;
+        }
+        p{
+            padding:1vw;
+            font-size: large;
+            border:1px solid;
+            text-align: center;
+        }
+        #empty{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <header><h1>Cart</h1></header>
+
+    <div id="cartDiv">
+        <span id="cartItem">
+            <p>Product 1</p>
+            <p>Product 2</p>
+            <p>Product 3</p>
+        </span>
+    </div>
+    <script>
+         var count = 0;
+        $(document).ready(() => {
+
+            $("p").click(function() {
+               $(this).slideUp();
+                count++;
+                remove();
+            });
+        });
+
+        function remove()
+        {
+            // $(element).slideUp();
+            if (count == 3) {
+                var element = $("#cartItem");
+                element.html("<p id='empty'>Cart is empty</p>"); // Use .html() to set the content
+            }
+        }
+    </script>
+</body>
+</html>

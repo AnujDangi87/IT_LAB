@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Database</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <style type="text/css">
+        body{
+            margin:0%;
+            padding: 0%;
+            background-color: lightblue;
+        }
+        header{
+            color:darkblue;
+            background-color: lightgreen ;
+            border: 4px solid black;
+            text-align: center;
+        }
+        div{
+            margin-top: 10px;
+            padding-left:35vw;
+            padding-right:30vw;
+            border: 4px solid #000000;
+            background-color: aliceblue;
+            align-self: center;
+        }
+        input{
+            align-items: center;
+            padding : 0.5vw;
+            margin:1vw;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 20cm;
+        }
+        input[type = "submit"]{
+            background-color: lightsalmon;
+            color: black;
+            padding: 0.5vw;
+            margin: 1vw;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 20cm;
+            cursor: pointer;
+        }
+        footer{
+            border: 4px solid #000000;
+            h2{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Welcome to Student Database</h1></header>
+    <div id="addDiv">
+        <form id="addStudent">
+            <input type="text" name="stdId" id="stdId" placeholder="Student Id" required><br>
+            <input type="name" name="name" id="name" placeholder="Student Name"><br>
+            <input type="email" name="email" id="email" placeholder="Student Email"><br>
+
+            <label for="gender">Gender : </label>Male
+            <input type="radio" name="gender" id="male" value="Male">Female
+            <input type="radio" name="gender" id="female" value="Female"><br>
+
+            <label for="image">Student Image : </label>
+            <input type="file" name="image" id="image"><br>
+
+            <label for="study_program">Study Program : </label>
+            <select id="study_program">
+                <option value="Bacheleors">Bacheleors</option>
+                <option value="Masters">Masters</option>
+                <option value="Doctoral">Doctoral</options>
+            </select><br><br>
+
+            <label for="year_of_study">Year Of Study : </label>
+            <select id="year_of_study">
+                <option value="Year 1">Year 1</option>
+                <option value="Year 2">Year 2</option>
+                <option value="Year 3">Year 3</options>
+                <option value="Year 4">Year 4</options>
+            </select><br>
+
+            <input type="submit" value="Add Student" id="addBtw">
+        </form>
+    </div>
+
+    <div id="updateDiv">
+        <h2>Edit Student</h2>
+        <form id="updateStudent">
+            <input type="text" id="updateId" name="updateId" required placeholder="Student Id">
+            <input type="text" id="updateName" placeholder="Student Name">
+            <input type="submit" value="Update Student">
+        </form>
+    </div>
+
+    <div id="deleteDiv">
+        <h2>Delete Student</h2>
+        <form id="deleteStudent">
+            <input type="text" id="deleteId" name="deleteId" placeholder="Student ID">
+            <input type="submit" value="Delete Student">
+        </form>
+    </div>
+
+    <footer>
+        <h2>Student Data</h2>
+        <ul id="showStudents"></ul>
+    </footer>
+    
+    <script src="./index.js"></script>
+</body>
+</html>

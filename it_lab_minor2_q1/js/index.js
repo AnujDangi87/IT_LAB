@@ -35,7 +35,7 @@ document.getElementById("post").addEventListener("submit", async (event) => {
 // Add event listener to the update submit event
 document.getElementById("update").addEventListener("submit", async (event) => {
     event.preventDefault(); // Prevent the default form submission
-
+    const updateText = document.getElementById("replace-text").value;
     try {
         //Update data to the server
         const response = await fetch("http://localhost:3000/", {
@@ -43,7 +43,7 @@ document.getElementById("update").addEventListener("submit", async (event) => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(), // Send data as JSON
+            body: JSON.stringify({updateText}), // Send data as JSON
         });
 
         if (!response.ok) {
