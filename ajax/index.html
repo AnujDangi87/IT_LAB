@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./style.css" rel="stylesheet" type="text/css">
+  <script src="node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+  <title>Search</title>
+</head>
+<body>
+  <div class="main_container">
+    <input type="text" id="search" placeholder="Search">
+        <table id="result">
+          <thead>
+            <tr>
+              <th>Search Result</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+  </div>
+
+  <script>
+   $(document).ready(function () {
+
+            loadAllRecords();
+
+            $('#search').on('keyup', function () {
+                var query = $(this).val();
+                if (query.length > 2) {
+                    $.ajax({
+                        url: 'server.php',
+                        type: 'POST',
+                        data: { search: query },
+                        success: function (data) {
+                            $('#result tbody').html(data);
+                        }
+                    });
+                } else {
+                    loadAllRecords();
+                }
+            });
+
+            function loadAllRecords() {
+                $.ajax({
+                    url: 'server.php',
+                    type: 'POST',
+                    data: { search: '' },
+                    success: function (data) {
+                        $('#result tbody').html(data);
+                    }
+                });
+            }
+        });
+  </script>
+</body>
+</html>
