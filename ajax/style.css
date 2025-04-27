@@ -14,7 +14,7 @@ body {
   align-self: center;
   background-color: lightblue;
   height: 50vh;
-  border: 2rem solid white;
+  border: 2px solid black;
   border-radius: 3rem;
     overflow: auto;
 }
